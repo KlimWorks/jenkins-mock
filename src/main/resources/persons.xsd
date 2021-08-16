@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.com/demo/gen"
+           targetNamespace="http://www.example.com/demo/gen" elementFormDefault="qualified">
+
+    <xs:element name="getPersonRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="DULSeries" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getPersonResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="PersonInBlackList" type="tns:PersonInBlackList"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+<!--    <xs:complexType name="Person">-->
+<!--        <xs:sequence>-->
+<!--            <xs:element name="FullName" type="xs:string"/>-->
+<!--            &lt;!&ndash;            <xs:element name="Address" type="tns:ListOfAddress"/>&ndash;&gt;-->
+<!--            <xs:element name="DULSeries" type="xs:string"/>-->
+<!--            <xs:element name="DULNumber" type="xs:int"/>-->
+<!--        </xs:sequence>-->
+<!--    </xs:complexType>-->
+
+    <xs:complexType name="PersonInBlackList">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="DULSeries" type="xs:string"/>
+            <xs:element name="BlackList" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--    <xs:complexType name="ListOfAddress">-->
+    <!--        <xs:sequence>-->
+    <!--            <xs:element name="Address1" type="xs:string"/>-->
+    <!--            <xs:element name="Address2" type="xs:string"/>-->
+    <!--        </xs:sequence>-->
+    <!--    </xs:complexType>-->
+</xs:schema>
